@@ -582,8 +582,9 @@ hr {
     text-align: center;
 }
 
-.footer {
-    
+.share svg {
+    height: 1.5rem;
+    width: 1.5rem;
 }
 
 /* Media Queries
