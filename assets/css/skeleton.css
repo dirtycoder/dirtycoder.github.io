@@ -578,13 +578,35 @@ hr {
 
 /* Dirtycoder
 -------------------------------------------------- */
+.container {
+    margin-top: 50px;
+}
+
 .text-center {
     text-align: center;
+}
+
+.share a {
+    border: 1px solid #eee;
+    border-radius: 5px;
+    margin-right: 8px;
+    padding: 3px;
+    text-decoration: none;
 }
 
 .share svg {
     height: 1.5rem;
     width: 1.5rem;
+    vertical-align: middle;
+}
+
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+
+.photo-round {
+    border-radius: 50%;
 }
 
 /* Media Queries

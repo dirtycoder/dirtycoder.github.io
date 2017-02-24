@@ -4,40 +4,55 @@ title: Blablabla bla bla
 ---
 
 <div class="row">
-  <div class="twelve columns">
-    <h1 class="text-center">{{ page.title }}</h1>
+  <div class="three columns text-center">
+    <a href="#"><img class="u-max-full-width photo-round" src="/assets/img/me.jpg" alt="Me" /></a>
+    <h5>Latest Posts</h5>
+    <ul class="list-unstyled">
+      {% for post in site.posts offset: 0 limit: 9 %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
   </div>
-</div>
 
-<div class="row">
-  <div class="twelve columns">
-    {{ content }}
-  </div>
-</div>
+  <div class="nine columns">
+    <div class="row">
+      <div class="twelve columns">
+        <h1 class="text-center">{{ page.title }}</h1>
+      </div>
+    </div>
 
-<div class="row">
-  <div class="twelve columns">
-    <div class="share">
-      <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ page.url|prepend: site.url }}&via=jllorencetti&related=jllorencetti" rel="nofollow" target="_blank" title="Share on Twitter">
-        {% include svg/twitter.svg %}
-        Twitter
-      </a>
-      <a href="https://facebook.com/sharer.php?u={{ page.url|prepend: site.url }}" rel="nofollow" target="_blank" title="Share on Facebook">
-        {% include svg/facebook.svg %}
-        Facebook
-      </a>
-      <a href="http://www.linkedin.com/shareArticle?mini=true&url={{ page.url|prepend: site.url }}&title={{ page.title }}&summary={{ page.title }}&source={{ site.url }}" rel="nofollow" target="_blank" title="Share on LinkedIn">
-        {% include svg/linkedin.svg %}
-        LinkedIn
-      </a>
-      <a href="http://www.reddit.com/submit?url={{ page.url|prepend: site.url }}&title={{ page.title }}" rel="nofollow" target="_blank" title="Share on Reddit">
-        {% include svg/reddit.svg %}
-        Reddit
-      </a>
-      <a href="https://plus.google.com/share?url={{ page.url|prepend: site.url }}" rel="nofollow" target="_blank" title="Share on Google+">
-        {% include svg/google-plus.svg %}
-        Google+
-      </a>
+    <div class="row">
+      <div class="twelve columns">
+        {{ content }}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="twelve columns">
+        <div class="share">
+          Share on
+          <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ page.url|prepend: site.url }}&via=jllorencetti&related=jllorencetti" rel="nofollow" target="_blank" title="Share on Twitter">
+            {% include svg/twitter.svg %}
+            Twitter
+          </a>
+          <a href="https://facebook.com/sharer.php?u={{ page.url|prepend: site.url }}" rel="nofollow" target="_blank" title="Share on Facebook">
+            {% include svg/facebook.svg %}
+            Facebook
+          </a>
+          <a href="http://www.linkedin.com/shareArticle?mini=true&url={{ page.url|prepend: site.url }}&title={{ page.title }}&summary={{ page.title }}&source={{ site.url }}" rel="nofollow" target="_blank" title="Share on LinkedIn">
+            {% include svg/linkedin.svg %}
+            LinkedIn
+          </a>
+          <a href="http://www.reddit.com/submit?url={{ page.url|prepend: site.url }}&title={{ page.title }}" rel="nofollow" target="_blank" title="Share on Reddit">
+            {% include svg/reddit.svg %}
+            Reddit
+          </a>
+          <a href="https://plus.google.com/share?url={{ page.url|prepend: site.url }}" rel="nofollow" target="_blank" title="Share on Google+">
+            {% include svg/google-plus.svg %}
+            Google+
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </div>
